@@ -1,0 +1,82 @@
+\documentclass[
+    a4paper,
+   12pt,			% font size
+   headsepline
+]{report}
+
+\usepackage[utf8]{inputenc}		% Pour afficher les caracteres internationaux
+\usepackage[T1]{fontenc}			% Pour l'encodage de caracteres
+\usepackage[french]{babel}
+
+
+\usepackage{lmodern} % Pour changer le pack de police
+\usepackage{makeidx} % For table of content
+\usepackage{layout}  % For \Layout comment 
+
+\usepackage{graphicx}   % For images 
+\usepackage{subcaption} % for multiple image caption
+
+
+
+
+
+
+% ========= FOR LINKS IN TABLE OF CONTENT ============= % 
+\usepackage{color}      % May be necessary if you want to color links
+\usepackage{hyperref}   % clickable links 
+\hypersetup{
+    colorlinks=true,    %set true if you want colored links
+    linktoc=all,        %set to all if you want both sections and subsections linked
+    linkcolor=black,    %choose some color if you want links to stand out
+}
+
+\usepackage{float}      %used for figure placement with H as a parameter
+\usepackage{setspace}
+\usepackage{enumerate}  %like itemize but  with numbers %didnt use it yet
+
+\usepackage[font=small,labelfont=bf]{caption}
+\def\figurename{\textbf{Figure }}
+
+%------- stuff i did not use yet -----%
+\usepackage{wrapfig} %pour que je mets la photo next to the text
+\usepackage{fancyhdr}
+%\usepackage{tabu}
+%\usepackage[final]{pdfpages}        % To Include PDFs
+%------------------------------------%
+
+\title{Projet Fin Etude}
+\author{Benzerga Malek}
+\date{\today}
+
+%------------ pour le title head ------------%
+\pagestyle{fancy}
+\fancyhf{}
+%%\rhead{Overleaf}
+\lhead{Traitement,Analyse de Donnèes pour l'Evaluation de la Qualitè de la Route}
+%%\rfoot{Page \thepage} pour afficher page + nombre de page
+%--------------------------------------------%
+
+
+% Bibliography 
+%\usepackage[backend=bibtex,sorting=none]{biblatex}
+%\addbibresource{bibliographie}
+
+
+
+\begin{document}
+
+% For that english quote %
+\begin{center}
+    \textit{\textbf{{\LARGE "The importance of the road infrastructure for the society could be compared with importance of blood vessels for human"}}}
+    \end{center}
+    \begin{flushright}
+    \textit{\textbf{-A wise man.}}
+    \end{flushright}
+% End of that english quote %
+
+\tableofcontents
+\input{Parts/introduction.tex}
+\bibliographystyle{abbrv}
+\bibliography{bibliographie}
+%\printbibliography[heading=bibintoc]
+\end{document}
