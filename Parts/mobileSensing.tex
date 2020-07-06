@@ -1,0 +1,53 @@
+\renewcommand\labelitemi{-}
+\renewcommand\labelitemii{$\circ$}
+\renewcommand {\thesection}{\arabic{section}}
+\chapter{La détection mobile <<Mobile sensing>>}
+%\addcontentsline{toc}{chapter}{La detection mobile <<Mobile sensing>>}
+
+Récemment, des petits capteurs hautes de performances se sont répandus et sont intégrés dans divers types d'objets dans notre environnement.\newline
+La détection mobile "Mobile sensing" utilise des capteurs intégrés dans des objets en mouvement tels que des voitures, des vélos et des smartphones, et les considère comme des capteurs de détection \cite{nomuraMethodEstimatingRoad2015}.\newline
+De plus, le taux de propagation des smartphones de haute qualité augmente et continuera de le faire. Ces derniers incluent de différents types de capteurs tels que des capteurs d'accélération et des capteurs gyroscopiques.
+
+%---- talking about sensors---%
+
+
+\section{Différents Capteurs} 
+
+Le capteur est un appareil qui détecte les changements dans l'environnement proche et envoie ces données au système d'exploitation ou au processeur. Ils détectent et collectent les données pour lesquelles ils sont faits.\newline
+Il existe trois catégories principales de capteurs que possède un smartphone \cite{tilluMobileSensorsComponents2019}:
+
+{\bf Les capteurs de mouvements:}
+ ils mesurent les forces d'accélération et les rotations autour des trois axes.  Ces capteurs sont capables de déterminer dans quelle direction est orienté l’appareil. A titre d’exemple, On trouve l'accéléromètre, les capteurs de gravité, les gyroscopes et les capteurs de vecteurs de rotation.
+
+ {\bf Les capteurs de position et d’attitude:}
+  Ce genre de capteurs détermine la position et l’orientation de l'appareil. On trouve donc les capteurs d’orientation, le gyroscope et le magnétomètre ainsi que le GPS. 
+ 
+ {\bf Les capteurs environnementaux:}
+ c’est des capteurs qui mesurent la pression atmosphérique, l'illumination et la température ambiante. (Baromètre, photomètre et thermomètre).
+
+ \section{Capteurs d'un smartphone} 
+
+ \subsection{Accéléromètre}
+ L'accéléromètre détecte la détection de mouvement basée sur l'axe. Il détecte les changements d'orientation des smartphones par rapport aux axes x, y et z.Cette accélération est utilisée pour déterminer la vitesse de l’appareil. La vitesse peut être intégrée pour déterminer le changement du périphérique de position et avec l’accélération on peut calculer l’orientation du smartphone.
+
+ \subsection{Gyroscope}
+Le gyroscope ou capteur gyroscopique est une version avancée de l'accéléromètre. Alors que l'accéléromètre détecte la détection de mouvement basée sur l'axe, le gyroscope fonctionne avec l'accéléromètre et détecte chaque degré de changement d'orientation. Il fournit une détection de mouvement très précieuse.
+
+\subsection{GPS}
+Le GPS ou le système de positionnement global est également très courant dans populaire est la plupart des téléphones modernes. Il aide à localiser l'emplacement sur Terre et aide à la navigation.
+
+
+\section{La détection mobile et les smartphones}
+
+Avec cette évolution dans le domaine des mobiles, il est possible de développer un système pratique et efficace à faible coût et recueilli divers types d'informations afin de détecter les anomalies routières telles que les ralentisseurs et les nids de-poule.\newline
+THIS NEXT PART YATMODIFIA SOON...
+
+\subsection{Détections des ralentisseurs}
+Il existe des études sur la détection des ralentisseurs à l'aide de capteurs d'accélération \cite{nomuraMethodEstimatingRoad2015},il est basé sur une analyse itérative de plusieurs corps en utilisant un modèle de véhicule à plusieurs corps. La méthode \cite{nomuraMethodEstimatingRoad2015} utilise des capteurs d'accélération à trois axes et un capteur GPS intégrés dans un véhicule.\newline
+Cette méthode consiste à placer un smartphone sur le tableau de bord d'une voiture et ne peut détecter les ralentisseurs que pendant la conduite, cette étude propose une méthode d'estimation de la hauteur et de la longueur des ralentisseurs à l'aide de capteurs d'accélération, après elle estime la quantité de déplacement vertical en utilisant le double entier de la composante verticale des valeurs d'accélération, et la définit comme la hauteur de le ralentisseur. cette méthode permet d'estimer rapidement l'état de la chaussée à faible coût en utilisant des smartphones. Cependant, les ralentisseurs qui ne font pas ressentir des vibrations aux autres passagers ne sont pas détectées et les ralentisseurs qui font ressentir les vibrations aux autres passagers ne sont pas détectées.\newline
+Par conséquent cette méthode a un problème d'une détection inadéquate des changements dans l'état de la surface des routes "un problème de précision".
+
+
+
+
+\renewcommand {\thesection}{\thechapter.\arabic{section}}
