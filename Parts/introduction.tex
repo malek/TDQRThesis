@@ -109,34 +109,34 @@ Détecter les anomalies d'une route présente un vrai challenge. Avant de commen
     \end{itemize}
 
 
-\section{Approches possibles}  
-Pour ce projet, et en raison des conditions routières dans notre zone géographique (Algérie), nous avons décidé de ne nous concentrer que 
-sur deux types d'anomalies: les bosses longues et courtes et les nids de poule.\newline
-Ainsi une grande vague d'un travail riche et divers a commencé juste pour estimer et étudier les revêtements routiers pour l'améliorer.
+% \section{Approches possibles}  
+% Pour ce projet, et en raison des conditions routières dans notre zone géographique (Algérie), nous avons décidé de ne nous concentrer que 
+% sur deux types d'anomalies: les bosses longues et courtes et les nids de poule.\newline
+% Ainsi une grande vague d'un travail riche et divers a commencé juste pour estimer et étudier les revêtements routiers pour l'améliorer.
 
-\subsection{Une approche utilisant des caméras fixes : }
-Cette méthode \cite{kawaiMethodDistinguishRoad2012} distincte  les conditions de surface de la route dans la nuit en utilisant une caméra montée sur une voiture.
-En conséquence, elle est basée sur des caractéristiques d'image telles que la "luminance" et la "caractéristique de texture". 
-Ils utilisent également les «informations de couleur» afin de prendre en compte l'existence de réverbères et de lampes de signalisation. De cette façon, il a été possible de distinguer les zones routières avec précision, y compris les parties éclairées par les lampadaires et autres sources de lumière en utilisant des informations de couleur. En conséquence, il a été possible d'obtenir une précision de distinction de 96 \% sur sec, 89\% sur mouillé et 96\% sur neige.
-L'un des problèmes avec cette méthode le coût des appareils où il est élevé, de plus, les cibles d'estimation sont limitées aux routes qui ont des dispositifs fixes .
-\begin{figure}[h!]
-    \center
-    \includegraphics[width=0.45\textwidth]{Images/chapter1/cameraFixe.jpg}
-    \caption{Utilisation des cameras fixes}
-    \end{figure}
+% \subsection{Une approche utilisant des caméras fixes : }
+% Cette méthode \cite{kawaiMethodDistinguishRoad2012} distincte  les conditions de surface de la route dans la nuit en utilisant une caméra montée sur une voiture.
+% En conséquence, elle est basée sur des caractéristiques d'image telles que la "luminance" et la "caractéristique de texture". 
+% Ils utilisent également les «informations de couleur» afin de prendre en compte l'existence de réverbères et de lampes de signalisation. De cette façon, il a été possible de distinguer les zones routières avec précision, y compris les parties éclairées par les lampadaires et autres sources de lumière en utilisant des informations de couleur. En conséquence, il a été possible d'obtenir une précision de distinction de 96 \% sur sec, 89\% sur mouillé et 96\% sur neige.
+% L'un des problèmes avec cette méthode le coût des appareils où il est élevé, de plus, les cibles d'estimation sont limitées aux routes qui ont des dispositifs fixes .
+% \begin{figure}[h!]
+%     \center
+%     \includegraphics[width=0.45\textwidth]{Images/chapter1/cameraFixe.jpg}
+%     \caption{Utilisation des cameras fixes}
+%     \end{figure}
    
-\subsection{Une approche utilisant des black-box cameras :}
+% \subsection{Une approche utilisant des black-box cameras :}
 
-    Cette approche \cite{joPotholeDetectionSystem2015} propose un nouveau système de détection de nids de poule utilisant une caméra à boîte noire commerciale. Le but de cette recherche est de développer un détecteur de nids-de-poule en utilisant des dispositifs communs qui sont utilisés par de nombreux conducteurs sur une large zone. De plus, les dispositifs devraient fournir une précision de détection élevée à faible coût. L'appareil le plus approprié pour cette exigence est la caméra à boîte noire où ils installent leur algorithme de détection des nids-de-poule, de sorte que tous les véhicules sur les routes seront un détecteur de ces derniers.
-    \begin{figure}[h!]
-      \center
-      \includegraphics[width=0.51\textwidth]{Images/chapter1/resultatDePotholDetection.jpg}
-      \caption{Résultat d'une détection de nid-de-poule}
-      \end{figure}
+%     Cette approche \cite{joPotholeDetectionSystem2015} propose un nouveau système de détection de nids de poule utilisant une caméra à boîte noire commerciale. Le but de cette recherche est de développer un détecteur de nids-de-poule en utilisant des dispositifs communs qui sont utilisés par de nombreux conducteurs sur une large zone. De plus, les dispositifs devraient fournir une précision de détection élevée à faible coût. L'appareil le plus approprié pour cette exigence est la caméra à boîte noire où ils installent leur algorithme de détection des nids-de-poule, de sorte que tous les véhicules sur les routes seront un détecteur de ces derniers.
+%     \begin{figure}[h!]
+%       \center
+%       \includegraphics[width=0.51\textwidth]{Images/chapter1/resultatDePotholDetection.jpg}
+%       \caption{Résultat d'une détection de nid-de-poule}
+%       \end{figure}
 
-\subsection{Une approche utilisant des capteurs mobiles :}
-  Mednis et al\cite{tilluMobileSensorsComponents2019} a conçu un système qui détecte les conditions routières comme les nids-de-poule à l'aide des capteurs intégrés du smartphone. Ils avaient utilisé un capteur accéléromètre du smartphone qui extrait les valeurs et détecte l'existence de nids de poule en temps réel. Ils avaient développé une application sous Android OS et testé en utilisant quatre techniques différentes pour détecter les anomalies routières.
-Le système proposé est basé sur une technique de seuil dans laquelle ils ont pu détecter l'état de la surface de la route avec une précision de 90\%.
+% \subsection{Une approche utilisant des capteurs mobiles :}
+%   Mednis et al\cite{tilluMobileSensorsComponents2019} a conçu un système qui détecte les conditions routières comme les nids-de-poule à l'aide des capteurs intégrés du smartphone. Ils avaient utilisé un capteur accéléromètre du smartphone qui extrait les valeurs et détecte l'existence de nids de poule en temps réel. Ils avaient développé une application sous Android OS et testé en utilisant quatre techniques différentes pour détecter les anomalies routières.
+% Le système proposé est basé sur une technique de seuil dans laquelle ils ont pu détecter l'état de la surface de la route avec une précision de 90\%.
 
 
 
