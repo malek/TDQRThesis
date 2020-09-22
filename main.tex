@@ -1,9 +1,4 @@
-\documentclass[
-    a4paper,
-   12pt,			% font size
-   headsepline
-]{report}
-
+\documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}		% Pour afficher les caractères internationaux
 \usepackage[T1]{fontenc}			% Pour l'encodage de caractères
 \usepackage[french]{babel}
@@ -15,7 +10,6 @@
 
 \usepackage{graphicx}   % For images 
 \usepackage{subcaption} % for multiple image captions
-
 
 
 
@@ -57,11 +51,14 @@
 %--------------------------------------------%
 
 
-% Bibliography 
-%\usepackage[backend=bibtex,sorting=none]{biblatex}
-%\addbibresource{bibliographie}
 
 
+\hypersetup{
+pdftitle={Traitement,Analyse de Donnèes pour l'Evaluation de la Qualitè de la Route},
+pdfsubject={Projet de Fin d’Etudes},
+pdfauthor={Benzerga Malek},
+pdfkeywords={Sensors, Animalies,Road, Accelerometre, Android, iOS, flutter}
+}
 
 \begin{document}
 
@@ -78,8 +75,8 @@
 \tableofcontents
 %\input{Parts/visualisationMemoire.tex}
 \input{Parts/introduction.tex}
-\input{Parts/mobileSensing.tex}
-\input{Parts/detectiondesanomalies.tex}
+\input{Parts/chapter1.tex}
+\input{Parts/chapter2.tex}
 \bibliographystyle{abbrv}
 \bibliography{bibliographie}
 %\printbibliography[heading=bibintoc]
