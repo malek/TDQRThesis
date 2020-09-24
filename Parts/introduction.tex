@@ -1,5 +1,4 @@
 
-
 \chapter*{Introduction générale}
 \addcontentsline{toc}{chapter}{Introduction générale}
 Selon le centre national de prévention et de sécurité routière algérien : 
@@ -28,7 +27,8 @@ plus de 3.049 personnes avaient trouvé la mort et 29.095 personnes avaient ét�
   \section{Problématique}
   De ce qui précède,l’entretien et la maintenance de la qualité de l'infrastructure routière est d'une importance vitale pour la société.\newline
   En Algérie particulièrement, ce domaine est presque négligé, les routes endommagées sont plus que les routes sûres.\newline 
-  L’entretien de la route en Algérie  passe par plusieurs phases : 
+  L’entretien de la route en Algérie  passe par plusieurs phases :
+      \renewcommand{\labelitemi}{$\bullet$} 
       \begin{itemize}
           \item Détection des dégradations.
           \item Localisation des dégradations : les agents du service de contrôle de la route utilisent les points kilométriques 'PK'. pour localiser les dégradations.
@@ -67,7 +67,8 @@ Normalement fabriquées par l'homme et généralement utilisées pour ralentir l
     On constate le plus souvent qu’ils imposent une limite de vitesse basse, inférieure à 40 km/h ou moins poussant les conducteurs à freiner d’avance.
     Les ralentisseurs en général ne sont pas des anomalies, mais les ralentisseurs mal fait ou ceux qui ont été exposés à des dégâts sans réparation sont considérés comme des anomalies.  
     De plus, leur utilisation est parfois controversée car:
- \begin{itemize}
+  \renewcommand{\labelitemi}{$\bullet$}
+  \begin{itemize}
     \item Ils peuvent augmenter le bruit de la circulation.
     \item Peuvent endommager les véhicules s'ils sont traversés à une vitesse trop élevée et ralentir les véhicules d'urgence.
     \item Les ralentisseurs mal conçus qui se tiennent trop haut ou avec un angle
@@ -86,10 +87,12 @@ Normalement fabriquées par l'homme et généralement utilisées pour ralentir l
 
 Détecter les anomalies d'une route présente un vrai challenge. Avant de commencer le projet,  
  nous sommes amenés à répondre aux questions suivantes :
+ \renewcommand{\labelitemi}{$\bullet$}
 \begin{itemize}
   \item Quels sont les différents caractéristiques d'une anomalie?
   \item Quels sont les différentes difficultés critères à prendre en compte pour décider si une anomalie est présente?
 	\item Peut-on offrir une solution informatique évoluée pour assister à cette décision? Si oui : 
+        
         \begin{itemize}
             \item Comment mesurer Le niveau de qualité de route?
             \item Comment détecter/révéler les différentes causes d'une mauvaise route?
@@ -100,6 +103,7 @@ Détecter les anomalies d'une route présente un vrai challenge. Avant de commen
 
    \section{Avantages}
   Développer un outil de route évolué a pour apport :
+  \renewcommand{\labelitemi}{$\bullet$}
     \begin{itemize}
 	  \item Un gain considérable de temps, efforts humains et une réduction de dépenses.
     \item Une surface de route solide et surtout sans danger pour les piétons et les conducteurs.
@@ -107,45 +111,16 @@ Détecter les anomalies d'une route présente un vrai challenge. Avant de commen
     \end{itemize}
 
 
-% \section{Approches possibles}  
-% Pour ce projet, et en raison des conditions routières dans notre zone géographique (Algérie), nous avons décidé de ne nous concentrer que 
-% sur deux types d'anomalies: les bosses longues et courtes et les nids de poule.\newline
-% Ainsi une grande vague d'un travail riche et divers a commencé juste pour estimer et étudier les revêtements routiers pour l'améliorer.
-
-% \subsection{Une approche utilisant des caméras fixes : }
-% Cette méthode \cite{kawaiMethodDistinguishRoad2012} distincte  les conditions de surface de la route dans la nuit en utilisant une caméra montée sur une voiture.
-% En conséquence, elle est basée sur des caractéristiques d'image telles que la "luminance" et la "caractéristique de texture". 
-% Ils utilisent également les «informations de couleur» afin de prendre en compte l'existence de réverbères et de lampes de signalisation. De cette façon, il a été possible de distinguer les zones routières avec précision, y compris les parties éclairées par les lampadaires et autres sources de lumière en utilisant des informations de couleur. En conséquence, il a été possible d'obtenir une précision de distinction de 96 \% sur sec, 89\% sur mouillé et 96\% sur neige.
-% L'un des problèmes avec cette méthode le coût des appareils où il est élevé, de plus, les cibles d'estimation sont limitées aux routes qui ont des dispositifs fixes .
-% \begin{figure}[h!]
-%     \center
-%     \includegraphics[width=0.45\textwidth]{Images/chapter1/cameraFixe.jpg}
-%     \caption{Utilisation des cameras fixes}
-%     \end{figure}
-   
-% \subsection{Une approche utilisant des black-box cameras :}
-
-%     Cette approche \cite{joPotholeDetectionSystem2015} propose un nouveau système de détection de nids de poule utilisant une caméra à boîte noire commerciale. Le but de cette recherche est de développer un détecteur de nids-de-poule en utilisant des dispositifs communs qui sont utilisés par de nombreux conducteurs sur une large zone. De plus, les dispositifs devraient fournir une précision de détection élevée à faible coût. L'appareil le plus approprié pour cette exigence est la caméra à boîte noire où ils installent leur algorithme de détection des nids-de-poule, de sorte que tous les véhicules sur les routes seront un détecteur de ces derniers.
-%     \begin{figure}[h!]
-%       \center
-%       \includegraphics[width=0.51\textwidth]{Images/chapter1/resultatDePotholDetection.jpg}
-%       \caption{Résultat d'une détection de nid-de-poule}
-%       \end{figure}
-
-% \subsection{Une approche utilisant des capteurs mobiles :}
-%   Mednis et al\cite{tilluMobileSensorsComponents2019} a conçu un système qui détecte les conditions routières comme les nids-de-poule à l'aide des capteurs intégrés du smartphone. Ils avaient utilisé un capteur accéléromètre du smartphone qui extrait les valeurs et détecte l'existence de nids de poule en temps réel. Ils avaient développé une application sous Android OS et testé en utilisant quatre techniques différentes pour détecter les anomalies routières.
-% Le système proposé est basé sur une technique de seuil dans laquelle ils ont pu détecter l'état de la surface de la route avec une précision de 90\%.
-
-
-
 \section{Solution proposée}
   Nous proposons un outil permettant de :
+  \renewcommand{\labelitemi}{$\bullet$}
     \begin{itemize}
       \item Fournir à la direction des travaux public "DTP" un moyen de se renseigner en temps réel sur la qualité des routes afin d'intervenir efficacement et le plus rapidement possible dans les travaux d'entretien.Ceci permettra d’améliorer les manquements cités plus haut.
       \item Mieux assister le conducteur dans sa conduite en prévenant des ralentisseurs/dégradations de la route, afin qu'il adapte sa conduite en fonction.\newline
     \end{itemize}
     Pour cela, nous visons à développer un système qui proposera les fonctionnalités suivantes :
-      \begin{itemize}
+    \renewcommand{\labelitemi}{$\bullet$}  
+    \begin{itemize}
         \item Détecter les événements (les nids-de-poule et les ralentisseurs dans notre cas) en temps réel.La collecte de données brutes pour un post-traitement hors ligne est classée comme une fonctionnalité supplémentaire. 
         \item Utiliser un smartphone basé sur Android-OS avec des capteurs accéléromètres comme plate-forme matérielle / logicielle. La portabilité vers d'autres plates-formes est classée comme une fonctionnalité supplémentaire.
         \item Pouvoir fonctionner sur différents modèles de smartphones avec différents paramètres. Au cours du processus de mise en œuvre du système, l'ensemble des paramètres minimaux du smartphone doit être déterminé et décrit.
