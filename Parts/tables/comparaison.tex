@@ -1,0 +1,43 @@
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|m{0.25\linewidth}|m{0.4\linewidth}|m{0.35\linewidth}|}
+        \hline
+        Parameters                                         & Wolverine                                                        & Mednis                                                   \\
+        \hline
+        Capteurs                                           & Accelerometre, Magnetometre, GPS                                 & Accelerometre, GPS                                       \\
+        \hline
+        Methodse pour la reorientation                     & Reorientation utilisant magnetometre et GPS bearing              & Non défini                                               \\
+        \hline
+        Valeur / Axes pris en compte                       & Z-axis Stdev sur une fenêtre de 1 sec du l'accéléromètre         & Valeurs de l'axe Z de l'accéléromètre                    \\
+        \hline
+        Techniques utilisées                               & Machine Learning utilisé pour détecter les bosses et le freinage & Z-Thresh, ZDiff, STDEV, G-Zero                           \\
+        \hline
+        Taux d'échantillonnage réel de l'accéléromètre     & 50                                                               & 100                                                      \\
+        \hline
+        Lieu d'expérimentation                             & IIT Bombay Campus                                                & Vairoga iela, Riga, Latvia                               \\
+        \hline
+        Taux d'échantillonnage pris en compte par seconde  & 50 values                                                        & 100 values                                               \\
+        \hline
+        Équipement utilisé pour la collecte de données     & Capteurs de smartphone (Google Nexus S, HTC Wildfire S)          & Samsung i5700 Samsung Galaxy S HTC Desire HTC HD2        \\
+        \hline
+        Véhicules utilisés                                 & Suzuki Access 125, Autorickshaw                                  & BMW 323 Touring (4-Wheeler)                              \\
+        \hline
+        Distance parcourue (km) / temps de trajet (heures) & Non reporté                                                      & 174 KM / Quelques semaines                               \\
+        \hline
+        Points de montage                                  & Non défini (placé dans une certaine orientation arbitraire)      & Tableau de bord avant                                    \\
+        \hline
+        Objectif de la détection                           & Bosses, freinage                                                 & Nids de poule                                            \\
+        \hline
+        Seuil 'threshold' utilisé                          & Non reporté                                                      & Z-Thresh = 0.4g Z-Diff = 0.2g STDEV = 0.2g G-Zero = 0.8g \\
+        \hline
+        Output                                             & FN - 10\% (2 roues) FP - 8\% (3 roues)                           & 90\% des vrais positifs                                  \\
+        \hline
+        Consommation d'énergie                             & Consomme 58\% moins d'énergie que Nericel                        & Non reporté                                              \\
+        \hline
+    \end{tabular} %
+
+    \caption{Comparaison technique des travaux existants}
+    \label{tab:my-table}
+\end{table}
+
