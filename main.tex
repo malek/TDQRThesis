@@ -1,12 +1,11 @@
 \documentclass[12pt,a4paper]{report}
 \usepackage[utf8]{inputenc}		% Pour afficher les caractères internationaux
+%\usepackage{fourier}
 \usepackage[T1]{fontenc}			% Pour l'encodage de caractères
 \usepackage[french,english]{babel}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
 
- \usepackage{lmodern} % Pour changer le pack de police
+
+\usepackage{lmodern} % Pour changer le pack de police
 \usepackage{makeidx} % For table of content
 \usepackage{layout}  % For \Layout comment 
 
@@ -14,7 +13,6 @@
 \usepackage{subcaption} % for multiple image captions
 
 \usepackage{rotating}
-
 
 
 % ========= FOR LINKS IN TABLE OF CONTENT ============= % 
@@ -30,13 +28,15 @@
 \usepackage{setspace}
 \usepackage{enumerate}  %like itemize but  with numbers %didnt use it yet
 \usepackage{array}
-%= \usepackage{tabularx} %fortables 
-% \usepackage[table,xcdraw]{xcolor}   % For arrays
-% \usepackage{array}
-% \usepackage{tabu}
+
+% Bibliography 
+% \usepackage[backend=bibtex,sorting=none]{biblatex}
+% \addbibresource{bibliographie}
 
 \usepackage[font=small,labelfont=bf]{caption}
 \def\figurename{\textbf{Figure }}
+
+%\PrerenderUnicode{é} % This is for fixing the issue or having index/header 'é' error
 
 %------- stuff i did not use yet -----%
 \usepackage{wrapfig} %pour que je mets la photo next to the text
@@ -45,11 +45,16 @@
 %\usepackage[final]{pdfpages}        % To Include PDFs
 %------------------------------------%
 
+
+
+%\usepackage{fourier}
 \title{Projet Fin Etude}
 \author{Benzerga Malek}
 \date{\today}
 
 %------------ pour le title head ------------%
+
+
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -57,36 +62,73 @@
 
 \fancyhead[RE,LO]{\rightmark}
 \fancyfoot[CE,CO]{\thepage}
-%--------------------------------------------%
 
 
-% \PrerenderUnicode{é} 
+%-------------------------------------------%
+
+\providecommand{\keywordEN}[1]{\textbf{\textit{Keywords---}} #1}
+
+\providecommand{\keywordFR}[1]{\textbf{\textit{Mots clés---}} #1}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
+\providecommand{\keywordz}[1]{\textbf{\textit{Keywords---}} #1}
+
 
 \hypersetup{
 pdftitle={Traitement,Analyse de Donnèes pour l'Evaluation de la Qualitè de la Route},
 pdfsubject={Projet de Fin d’Etudes},
 pdfauthor={Benzerga Malek},
-pdfkeywords={Sensors, Animalies,Road, Accelerometre, Android, iOS, flutter}
+pdfkeywords={Sensors, Animalies,Road, Accelerometre, Android, flutter}
 }
 
 \begin{document}
 
-% For that english quote %
-\begin{center}
-    \textit{\textbf{{\LARGE "The importance of the road infrastructure for the society could be compared with importance of blood vessels for human"}}}
-    \end{center}
-    \begin{flushright}
-    \textit{\textbf{-A Wise man.}}
-    \end{flushright}
-% End of that english quote %
 
 
+\selectlanguage{french} 
+	\begin{abstract}
+
+        L'importance des infrastructures routières pour la société pourrait être comparée à celle des vaisseaux sanguins pour l'homme. Pour assurer la qualité de la surface de la route, elle doit être surveillée en permanence et réparée si nécessaire, et c'est le cœur du concept de ce travail.
+
+        Dans ce projet, trois points majeurs seront abordés : la détection mobile et les différents avantages qu’elle offre, comment nous pouvons les utiliser pour détecter les anomalies routières ( mentionnant plusieurs travaux similaires et présentant l’algorithme que nous avons utilisé pour fabriquer notre système), et enfin, présenter l’ensemble du système depuis l’application d’enregistrement pour mettre en place en passant par la partie serveur, et jusqu’aux résultats. \newline 
+
+
+
+
+		\begin{keywords}
+			Détection Mobile, Algorithmes, Anomalies, Seuil, Capteurs de smartphone, Accelerometres, Flutter.
+		\end{keywords}
+		
+
+		
+		
+	\end{abstract}
+	
+	\begin{selectlanguage}{english}
+		
+		\begin{abstract}
+            
+            The importance of road infrastructure for society could be compared to that of blood vessels for humans. To ensure the quality of the road surface, it must be continuously monitored and repaired if necessary, and that is the heart of this work.
+
+            In this project, three major points will be addressed: mobile detection and the various advantages it offers; how we can use them to detect road anomalies mentioning several similar works and presenting the algorithm that we used to build our system, then present the whole system from the recording application going through the server part to the results. \newline 
+
+			\begin{keywordEN}
+				Mobile Sensing, Algorithms, Anomalies, Threshold, Smartphone Sensors, Accelerometers, Flutter.\\
+				
+			\end{keywordEN}
+			
+		\end{abstract}
+    \end{selectlanguage}
+	
+	
 \tableofcontents
-%\input{Parts/visualisationMemoire.tex}
+\listoffigures
+
 \input{Parts/introduction.tex}
 \input{Parts/chapter1.tex}
 \input{Parts/chapter2.tex}
 \input{Parts/chapter3.tex}
+\input{Parts/chapter4.tex}
 \bibliographystyle{abbrv}
 \bibliography{bibliographie}
 %\printbibliography[heading=bibintoc]

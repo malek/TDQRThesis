@@ -12,7 +12,7 @@ Avec cette évolution dans le domaine des mobiles, il est possible de développe
 que les ralentisseurs et les nids de-poule.
 
 \section{Travaux Connexes}
-
+\label{tavauxconnexes}
 \subsection{Wolverine}
 Wolverine \cite{bhoraskarWolverineTrafficRoad2012} est une méthode qui utilise  des données de capteurs des smartphones pour déterminer les conditions et l'état de la route, et utilise aussi des techniques d'apprentissage automatique “Machine learning” (clustering K-means et Support Vector Machine (SVM)) pour la surveillance et suivi de l'état de la route. Le processus consiste en deux parties: un algorithme pour réorienter virtuellement les axes de coordonnées d'un téléphone désorienté  et techniques d'apprentissage automatique pour identifier les événements de bosse et de freinage.
 
@@ -43,7 +43,7 @@ Ce travail a été fait à Mumbai. L'algorithme identifie correctement 18 des 20
 \subsection{Real time pothole detection using Android smartphones with accelerometer}
 Mednis et al. ont proposé un système de détection des nids-de-poule en temps réel basés sur des données d'accéléromètre pour le déploiement sur des appareils avec des ressources matérielles / logicielles limitées et leur évaluation sur des données du monde réel acquises à l'aide de différents smartphones basés sur Androïd OS.
 
-Ils ont utilisé un dispositif de collier LynxNet modifié \cite{PDFLynxNetWild} sur une route avec divers nids-de-poule pour la collecte des données des capteurs de l'accéléromètre.
+Ils ont utilisé un dispositif de collier LynxNet modifié \cite{zviedrisLynxNetWildAnimal2010} sur une route avec divers nids-de-poule pour la collecte des données des capteurs de l'accéléromètre.
 
 Après l'acquisition du premier jeu de données de test, une recherche de fonctionnalités liées aux événements potentiels a été effectuée: Le premier et le plus simple algorithme de détection d'événements ZTHRESH a été testé sur l'ensemble des données acquises . Il est similaire à l'algorithme z-peak utilisé dans les systèmes Pothole Patrol \cite{PotholePatrolProceedings}, Nericell \cite{mohanNericellUsingMobile2008}, et limite l'amplitude de l'accélération sur l'axe Z. Les valeurs dépassant des seuls spécifiques sont utilisés pour identifier et classifier les nids de poules (Figure \ref{fig:graph_Z_THRESH}). 
 
@@ -102,7 +102,7 @@ Notre algorithme pour la détection de l'état de la route se distingue des trav
 \newpage
 \section{L'acquisition des données}
 Notre système dépend de l'accéléromètre du smartphone attaché à un véhicule, produisant des résultats pour une condition de route donnée et sur la localisation précise de ces résultats à partir du GPS de ce smartphone.
-Dans cette section, nous décrivons quelques expériences effectuées par Pothole Patrol \cite{PDFPotholePatrol} pour valider le fonctionnement des capteurs d'un smartphone et la meilleure position où l'attacher.
+Dans cette section, nous décrivons quelques expériences effectuées par Pothole Patrol \cite{erikssonPotholePatrolUsing2008a} pour valider le fonctionnement des capteurs d'un smartphone et la meilleure position où l'attacher.
 
 \subsection{Positionnement du smartphone}
 Une préoccupation est que le placement du smartphone à l'intérieur du véhicule pourrait affecter la qualité du signal de l'accéléromètre. Pothole Patrol ont placé leurs accéléromètres à deux endroits à l'intérieur de la cabine d'une seule voiture. La (Figure \ref{fig:smartphonePosition}) montre le signal de l'accéléromètre pour un tronçon fixe de chaussée à partir de deux positions de montage différentes: fixé au tableau de bord, et fixé sur le côté droit du pare-brise. Les signaux du tableau de bord et du pare-brise semblent assez similaires. 
@@ -123,6 +123,7 @@ Pour la collecte de données, nous avons créé une application mobile qui utili
 Ceci sera discuté dans la section \ref{sec:app_record}.
 
 \section{Notre Approche}
+\label{sec:approache}
 Notre approche utilisera principalement les données de l'accéléromètre comme entrées (input).
 Ce dernier signale l'accélération du véhicule le long des trois axes du capteur. 
 
@@ -165,24 +166,43 @@ Cette étape est divisée en deux parties:
         \right]
 \]
 Tel que : 
-\renewcommand{\labelitemi}{$\bullet$}
 \begin{itemize}
-  \item $radius  = 6371 * 10^{3} $ m.
-  \item d est la distance obtenue en mètres.
+  \item[$\ast$] $radius  = 6371 * 10^{3} $ m.
+  \item[$\ast$] d est la distance obtenue en mètres.
 \end{itemize}
  
 \item[Speed filtering]: Une fois les données divisées en fenêtres, nous devons filtrer les fenêtres inutiles avant le traitement. 
 
-Dans cette partie, nous filtrons chaque fenêtre  selon la vitesse du véhicule. Les fenêtre dans lesquelles le véhicule ne se déplace pas ou se déplace très lentement sont ignorées (nous avons utilisé 20 m/s comme seuil de vitesse).
+Dans cette partie, nous filtrons chaque fenêtre  selon la vitesse du véhicule. Les fenêtre dans lesquelles le véhicule ne se déplace pas ou se déplace très lentement sont ignorées (nous avons utilisé 20 km/h comme seuil de vitesse).
 
 \end{description}
+
+
+\begin{figure}[h!]
+  \center
+  \begin{subfigure}{.75\textwidth}
+      \center
+      \includegraphics[width=0.8\textwidth]{Images/chapter2/approache/avantissage.png}
+      \caption{Les données avant la méthode de lissage.}
+      \label{fig:avantlissage}
+  \end{subfigure}
+  \begin{subfigure}{.75\textwidth}
+      \center
+      \includegraphics[width=0.8\textwidth]{Images/chapter2/approache/apreslissage.png}
+      \caption{Les données après la méthode de lissage.}
+      \label{fig:apreslissage}
+  \end{subfigure}
+ 
+  \caption{Le lissage des données.}
+  \label{fig:lissage}
+\end{figure}
 
 \subsection{Lissage et valeur des seuils}
 Une fois que l’algorithme a obtenu les données filtrées, il commence par les lisser pour éliminer les vibrations normales, puis calcule la valeur moyenne de toutes les données afin de l’utiliser comme référence pour détecter les valeurs anormales.
 
-La méthode de lissage que nous avons utilisée consiste à remplacer chaque point par la moyenne de ce point avec les 2 valeurs avant et après chaque point concerné. 
+La méthode de lissage que nous avons utilisée consiste à remplacer chaque point par la moyenne de ce dernier avec les 2 valeurs avant et après chaque point concerné. 
 
-Le moment où la valeur moyenne est calculée  et en nous inspirant de nombreux articles de recherche dans ce domaine, nous avons choisi 0,85 g comme valeur de sensibilité afin de calculer le seuil.
+Le moment où la valeur moyenne est calculée  et en se basant sur notre état de l'art [\ref{tavauxconnexes}], et quelques tests sur des données réels nous avons choisi 0,85 g comme valeur de sensibilité afin de calculer le seuil (Figure  \ref{fig:lissage}).
 
 Nous avons calculé les valeurs de seuil comme suit:
 
@@ -193,10 +213,10 @@ Nous avons calculé les valeurs de seuil comme suit:
   Tel que:
   
 \begin{itemize}
-  \item UpThreshold : Valeur du seul supérieur.
-  \item DownThreshold : Valeur du seul inférieur.
-  \item Average : La valeur moyenne de toutes les données de la fenêtre.
-  \item  SensitivityValue: 0.85 g.
+  \item[$\ast$] UpThreshold : Valeur du seul supérieur.
+  \item[$\ast$] DownThreshold : Valeur du seul inférieur.
+  \item[$\ast$] Average : La valeur moyenne de toutes les données de la fenêtre.
+  \item[$\ast$] SensitivityValue: 0.85 g.
 \end{itemize}
 
 
@@ -204,5 +224,15 @@ Nous avons calculé les valeurs de seuil comme suit:
 Une fois les données prêtes à être traitées, et que les valeurs des seuils sont calculées. On s’intéresse aux points dépassant ces valeurs de seuil qui représentent probablement des anomalies dans la route.
 
 On compte ces valeurs pour calculer le score de qualité de ce morceau  de route.
+
+
+
+
+\begin{figure}[h!]
+  \center
+  \includegraphics[width=0.85\textwidth]{Images/chapter2/approache/zscore.PNG}
+  \caption{Les données  dépassant les valeurs de seuil.}
+  \label{fig:zscore}
+\end{figure}
 
 Nous appelons ce score le Z Score, c'est une valeur entre 0 et 1 ( 0\% à 100\%), plus la valeur est élevée, plus la route est de mauvaise qualité.
