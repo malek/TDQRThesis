@@ -23,7 +23,7 @@ La 2ème étape consistera à utiliser un algorithme d'apprentissage non supervi
 \begin{figure}[h!]
   \center
   \includegraphics[width=0.75\textwidth]{Images/chapter2/relatedWork1.PNG}
-  \caption{Accelerometer Data for three speedbreakers}
+  \caption{Données d'accéléromètre pour trois Ralentisseurs.}
   \label{fig:wolverine_1}
 \end{figure}
 
@@ -34,7 +34,7 @@ Et pour la détection du freinage du véhicule, la technique utilisée est ident
 \begin{figure}[h!]
   \center
   \includegraphics[width=0.75\textwidth]{Images/chapter2/relatedWork2.PNG}
-  \caption{Braking events with generated class labels}
+  \caption{Événements de freinage avec étiquettes de classe générées.}
   \label{fig:wolverine_2}
 \end{figure}
 
@@ -50,7 +50,7 @@ Après l'acquisition du premier jeu de données de test, une recherche de foncti
 \begin{figure}[h!]
   \center
   \includegraphics[width=0.75\textwidth]{Images/chapter2/relatedWork3.PNG}
-  \caption{Pothole detection algorithm Z-THRESH. Les évènements sont représentés par des mesures avec des valeurs dépassant un seuil spécifié.}
+  \caption{Algorithme de détection des nids-de-poule Z-THRESH. Les évènements sont représentés par des mesures avec des valeurs dépassant un seuil spécifié.}
   \label{fig:graph_Z_THRESH}
 \end{figure}
 
@@ -59,7 +59,7 @@ Pour la réorientation virtuelle, ils ont utilisé une approche plus simple: un 
 \begin{figure}[h!]
   \center
   \includegraphics[width=0.9\textwidth]{Images/chapter2/relatedWork4.PNG}
-  \caption{Pothole detection algorithm Z-DIFF.}
+  \caption{Algorithme de détection des nids-de-poule Z-DIFF.}
   \label{fig:graph_Z_DIFF}
 \end{figure}
 
@@ -71,7 +71,7 @@ Les auteurs ont décidé de mettre en œuvre certaines des techniques utilisées
 \begin{figure}[h!]
   \center
   \includegraphics[width=0.85\textwidth]{Images/chapter2/relatedWork5.PNG}
-  \caption{Pothole detection algorithm STDEV(Z).}
+  \caption{Algorithme de détection des nids-de-poule STDEV(Z).}
   \label{fig:graph_STDEV_z}
 \end{figure}
 
@@ -80,7 +80,7 @@ En utilisant des outils d'analyse visuelle des données et en recherchant des mo
 \begin{figure}[h!]
   \center
   \includegraphics[width=0.7\textwidth]{Images/chapter2/relatedWork6.PNG}
-  \caption{Pothole detection algorithm G-ZERO.}
+  \caption{Algorithme de détection des nids-de-poule G-ZERO.}
   \label{fig:graph_g_zero}
 \end{figure}
 
@@ -90,6 +90,7 @@ Les algorithmes (Z-THRESH., Z-DIFF, STDEV(Z) et G-ZERO) ont détecté des irrég
 En gros, les tests d'évaluation ont abouti à une configuration optimale pour chaque algorithme sélectionné et l'analyse des performances dans le contexte de différentes classes d'irrégularité routière montre des taux de vrais positifs pouvant atteindre 90\%.
 
 \bigbreak
+\newpage
 Notre algorithme pour la détection de l'état de la route se distingue des travaux connexes de plusieurs côtés:
 \begin{itemize}
   \item Nous ne détectons pas d'anomalies spécifiques, par contre nous concluons une évaluation de l'état de la route en général.

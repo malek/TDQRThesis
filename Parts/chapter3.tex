@@ -38,7 +38,7 @@ Notre système se compose de plusieurs parties; une application mobile qui recue
 \begin{figure}[ht]
     \center
     \includegraphics[width=1.2\textwidth]{Images/chapter3/diagrameSequence.jpg}
-    \caption{Diagramme de séquence}
+    \caption{Diagramme de séquence.}
     \label{fig:System}
 \end{figure}
 
@@ -64,7 +64,7 @@ Les principales structures de données que propose Pandas sont les séries (pour
 \begin{figure}[h!]
     \center
     \includegraphics[width=0.50\textwidth]{Images/chapter3/python_pandas.png}
-    \caption{Python and Pandas Logos}
+    \caption{Python et Pandas Logo.}
     \label{fig:Technologies}
 \end{figure}
 
@@ -84,7 +84,7 @@ En 2018, Flask était élu "Framework web le plus populaire" par le Python Devel
 \begin{figure}[h!]
     \center
     \includegraphics[width=0.50\textwidth]{Images/chapter3/flask.png}
-    \caption{Logo Flask}
+    \caption{Logo Flask.}
     \label{fig:Technologies}
 \end{figure}
 
@@ -103,7 +103,7 @@ Comme React Native\cite{ReactNativeFramework}, Flutter fournit également des vu
 \begin{figure}[h!]
     \center
     \includegraphics[width=0.50\textwidth]{Images/chapter3/flutter.png}
-    \caption{Flutter Logo}
+    \caption{Flutter Logo.}
     \label{fig:Technologies}
 \end{figure}
 
@@ -119,28 +119,28 @@ Nous avons développé une application mobile utilisant Flutter pour la collecte
     \begin{subfigure}{.50\textwidth}
         \center
         \includegraphics[width=0.50\textwidth]{Images/recordingApp/firstScreen.jpg}
-        \caption{Welcome Screen.}
+        \caption{Ecran d'accueil.}
         \label{fig:Welcome Screen}
     \end{subfigure}
     \begin{subfigure}{.50\textwidth}
         \center
         \includegraphics[width=0.50\textwidth]{Images/recordingApp/askingGps.jpg}
-        \caption{Gps activating alert.}
+        \caption{Alerte d'activation GPS.}
         \label{fig:GpsAcivate}
     \end{subfigure}
     \begin{subfigure}{.50\textwidth}
         \center
         \includegraphics[width=0.50\textwidth]{Images/recordingApp/noGpsAlert.jpg}
-        \caption{Notification to ativate GPS.}
+        \caption{Notification pour activer le GPS.}
         \label{fig:gpsNotif}
     \end{subfigure}
     \begin{subfigure}{.50\textwidth}
         \center
         \includegraphics[width=0.50\textwidth]{Images/recordingApp/recordingScreen.jpg}
-        \caption{Recording Screen.}
+        \caption{Écran d'enregistrement.}
         \label{fig:Recording}
     \end{subfigure}
-    \caption{Application de récolte}
+    \caption{Application de récolte.}
     \label{fig:app_recolte}
 \end{figure}
 
@@ -162,7 +162,7 @@ Nous avons développé une application mobile utilisant Flutter pour la collecte
           \begin{figure}[h!]
               \center
               \includegraphics[width=0.50\textwidth]{Images/recordingApp/doneRecording.jpg}
-              \caption{Done Recording.}
+              \caption{Enregistrement terminé.}
               \label{fig:Done}
           \end{figure}
 
@@ -179,8 +179,8 @@ Nous avons développé une application mobile utilisant Flutter pour la collecte
           
 \begin{figure}[h!]
         \center
-        \includegraphics[width=0.75\textwidth]{Images/recordingApp/csv.jpg}
-        \caption{CSV File.}
+        \includegraphics[width=0.95\textwidth]{Images/recordingApp/csv.jpg}
+        \caption{Fichier CSV.}
         \label{fig:csv}
     \end{figure}
 
@@ -207,7 +207,7 @@ Le server de traitement présente une API pour permettre la communication avec l
 \begin{figure}[h!]
     \center
     \includegraphics[width=0.75\textwidth]{Images/chapter3/apiAvantages.png}
-    \caption{Avantages de l'API}
+    \caption{Avantages de l'API.}
   \end{figure}
 
 
@@ -220,33 +220,42 @@ Le server de traitement présente une API pour permettre la communication avec l
      
 \end{description} 
 
-
-
-  \subsection{Implémentation de l’API}
-  En général, notre système suit les activités présentées dans le diagramme \ref{activityDiagram}.
-
-
-  \begin{figure}[h!]
+\begin{figure}[h!]
     \center
     \includegraphics[width=\textwidth]{Images/chapter3/activityDiagram.png}
-    \caption{Diagrame d'activités}
+    \caption{Diagrame d'activités.}
     \label{activityDiagram}
   \end{figure}
 
-
-  Notre API travaille principalement avec une seule route de type POST:
-
+  \subsection{Implémentation de l’API}
+  En général, notre système suit les activités présentées dans le diagramme (\ref{activityDiagram}).
   
+  
+  
+  Notre API travaille principalement avec deux routes:
   \begin{description}
-    \item[/api/process\_data] : Une route qui reçoit et traite les données, puis les enregistre dans la base de données.  
+    \item[POST /api/process\_data] : Une route qui reçoit et traite les données, puis les enregistre dans la base de données.
+    \item[GET /api/road\_data] : Une route qui retourne les données stockées dans la base de données (location et score) à le application client. Elle accepte comme paramètres optionnel la position actuelle (latitude,longitude) pour retourner que les points proches de 1Km.
 \end{description}
 
+La base de données stocke le score avec un point de localisation (le centre) correspondant à la fenêtre prise, et les rend disponibles pour les différentes applications clientes.
 
-La base de données stocke le score avec les points de localisation correspondants pour la fenêtre prise; et les rend disponibles pour les différentes applications clientes.
+\section{Visualisation des résultats}
+Pour cette version de travail, on a essayé de visualiser les résultats obtenus depuis l’application de récolte (Figure \ref{fig:Welcome Screen}) à travers un écran Road Quality Map (Figure \ref{seeMap}) qui montre la qualité de la route de chaque 100m enregistrés à travers des cercles colorés (vert, orange, rouge), et un marqueur au centre de chaque segment avec le score correspondant. Pour plus de visibilité, les cercles verts qui représentent les segments de bonne qualité sont
+cachés par défaut.
+
+\newpage
+\begin{figure}[h!]
+    \center
+    \includegraphics[width=0.50\textwidth]{Images/recordingApp/seeMap.jpg}
+    \caption{Visualisation des résultats sur la carte.}
+    \label{seeMap}
+  \end{figure} 
+
+
 
 \section{Conclusion}
 Dans ce chapitre, nous avons décrit l'architecture de notre système, et les différentes technologies utilisées pour ce travail, nous avons également présenté comment l'application de collecte est construite et comment le serveur communique avec les différents parties. Concernant la partie base de données, elle est prévue dans les travaux futurs. Malgré les différentes contraintes (complexité du problème, manque de données claires, Pandémie actuelle), la représentation choisie pour cette première version reste suffisante et facilement extensible pour de futures améliorations.
-
 
 
 

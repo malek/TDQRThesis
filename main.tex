@@ -41,10 +41,8 @@
 %------- stuff i did not use yet -----%
 \usepackage{wrapfig} %pour que je mets la photo next to the text
 \usepackage{fancyhdr}
-%\usepackage{tabu}
-%\usepackage[final]{pdfpages}        % To Include PDFs
-%------------------------------------%
 
+\usepackage[final]{pdfpages} % To Include PDFs
 
 
 %\usepackage{fourier}
@@ -83,44 +81,10 @@ pdfkeywords={Sensors, Animalies,Road, Accelerometre, Android, flutter}
 
 \begin{document}
 
+\includepdf[pages=-]{parts/pagedegarde.pdf}
 
-
-\selectlanguage{french} 
-	\begin{abstract}
-
-        L'importance des infrastructures routières pour la société pourrait être comparée à celle des vaisseaux sanguins pour l'homme. Pour assurer la qualité de la surface de la route, elle doit être surveillée en permanence et réparée si nécessaire, et c'est le cœur du concept de ce travail.
-
-        Dans ce projet, trois points majeurs seront abordés : la détection mobile et les différents avantages qu’elle offre, comment nous pouvons les utiliser pour détecter les anomalies routières ( mentionnant plusieurs travaux similaires et présentant l’algorithme que nous avons utilisé pour fabriquer notre système), et enfin, présenter l’ensemble du système depuis l’application d’enregistrement pour mettre en place en passant par la partie serveur, et jusqu’aux résultats. \newline 
-
-
-
-
-		\begin{keywords}
-			Détection Mobile, Algorithmes, Anomalies, Seuil, Capteurs de smartphone, Accelerometres, Flutter.
-		\end{keywords}
-		
-
-		
-		
-	\end{abstract}
-	
-	\begin{selectlanguage}{english}
-		
-		\begin{abstract}
-            
-            The importance of road infrastructure for society could be compared to that of blood vessels for humans. To ensure the quality of the road surface, it must be continuously monitored and repaired if necessary, and that is the heart of this work.
-
-            In this project, three major points will be addressed: mobile detection and the various advantages it offers; how we can use them to detect road anomalies mentioning several similar works and presenting the algorithm that we used to build our system, then present the whole system from the recording application going through the server part to the results. \newline 
-
-			\begin{keywordEN}
-				Mobile Sensing, Algorithms, Anomalies, Threshold, Smartphone Sensors, Accelerometers, Flutter.\\
-				
-			\end{keywordEN}
-			
-		\end{abstract}
-    \end{selectlanguage}
-	
-	
+\input{Parts/thnx.tex}	
+\input{Parts/abstractFrEn.tex}	
 \tableofcontents
 \listoffigures
 
